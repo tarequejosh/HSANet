@@ -1,85 +1,55 @@
-# HSANet: Lightweight Hybrid Scale-Attention Network for Brain Tumor MRI Classification
+# HSANet
 
-[![Paper](https://img.shields.io/badge/Paper-HSANet_Journal_Paper.docx-blue)](./HSANet_Journal_Paper.docx)
+Brain tumor MRI classification (4 classes) using EfficientNet-B3, depthwise-separable multi-scale attention (AMSM), and an evidential classifier.
 
-**Authors:** Tareque Jamil Josh, Md. Minhazur Rahman Mim, Md. Aminur Rahman Joy, Md. Assaduzzaman, Sheak Rashed Haider Noori  
-**Affiliation:** Department of Computer Science and Engineering, Daffodil International University, Dhaka, Bangladesh  
-**Correspondence:** Md. Assaduzzaman — assaduzzaman.cse@diu.edu.bd
+**Team:** Tareque Jamil Josh, Md. Minhazur Rahman Mim, Md. Aminur Rahman Joy, Md. Assaduzzaman, Sheak Rashed Haider Noori  
+**Dept. of CSE, Daffodil International University, Dhaka**  
+Contact: assaduzzaman.cse@diu.edu.bd
 
-## Overview
+## Results (BRISC 2025 test)
 
-HSANet (Hybrid Scale-Attention Network) is a parameter-efficient deep learning model for four-class brain tumor classification on T1-weighted MRI. It combines:
+| Metric | HSANet v6 |
+|--------|-----------|
+| Accuracy | 99.2% |
+| Macro-F1 | 99.30% |
+| Params | 10.97M |
+| PMRAM-BD (external) | 97.41% |
 
-- **EfficientNet-B3** multi-scale backbone
-- **AMSM** — depthwise-separable Adaptive Multi-Scale Module with softmax-normalized four-branch fusion
-- **EDL** — Evidential Deep Learning head for single-pass uncertainty estimation
+Metrics: `hsanet_results v6/results/` · Figures: `hsanet_results v6/figures/`
 
-Version 6 removes the redundant Dual Attention Module (DAM) used in version 5 after ablation showed stacked attention did not improve performance.
-
-## Key results (BRISC 2025 test set)
-
-| Metric | HSANet (v6) |
-|--------|-------------|
-| Accuracy | **99.2%** |
-| Macro-F1 | **99.30%** |
-| Parameters | **10.97M** |
-| External (PMRAM-BD) | **97.41%** |
-
-See [`results/`](./hsanet_results%20v6/results/) for full JSON metrics and [`figures/`](./hsanet_results%20v6/figures/) for publication plots.
-
-## Repository structure
-
-```
-HSANet/
-├── README.md
-├── requirements.txt
-├── hsanet-v6.ipynb          # Main experiment notebook (Kaggle-ready)
-├── hsanet-v5.ipynb          # Earlier prototype (AMSM + DAM)
-├── HSANet_Journal_Paper.docx
-├── HSANet_Journal_Paper.md
-├── generate_paper_docx.py
-└── hsanet_results v6/
-    ├── results/             # evaluation JSON
-    └── figures/             # publication figures
-```
-
-## Datasets
-
-| Dataset | Role | Link |
-|---------|------|------|
-| **BRISC 2025** | Primary (train/test) | [Kaggle](https://www.kaggle.com/datasets/briscdataset/brisc2025) · [DOI 10.34740/kaggle/ds/7632487](https://doi.org/10.34740/kaggle/ds/7632487) |
-| **PMRAM-BD** | External validation | [Mendeley](https://data.mendeley.com/datasets/m7w55sw88b/1) |
-
-BRISC was created by Fateh *et al.* (IUST, Shahrood University of Technology, NHS UK, University of Essex). This project uses the public Kaggle release and is not affiliated with the BRISC authors.
-
-## Quick start
+## Setup
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Open `hsanet-v6.ipynb` in Jupyter or upload to [Kaggle](https://www.kaggle.com/) with BRISC and PMRAM-BD datasets attached. Update `DATASET_PATHS` in the notebook if running locally.
+Run `hsanet-v6.ipynb` (main). `hsanet-v5.ipynb` is an older build with an extra DAM attention block (removed in v6).
+
+**Datasets**
+
+- [BRISC 2025](https://www.kaggle.com/datasets/briscdataset/brisc2025) — train/test  
+- [PMRAM-BD](https://data.mendeley.com/datasets/m7w55sw88b/1) — external test  
+
+Set `DATASET_PATHS` in the notebook for local paths, or attach datasets on Kaggle.
+
+## Layout
+
+```
+hsanet-v6.ipynb
+hsanet-v5.ipynb
+requirements.txt
+hsanet_results v6/
+  results/*.json
+  figures/*.png
+  models/README.md
+```
+
+Trained `.pth` checkpoints are not in the repo (size). See `hsanet_results v6/models/README.md`.
 
 ## Citation
 
-If you use this code or report, please cite:
-
-```bibtex
-@article{hsanet2026,
-  title   = {HSANet: A Lightweight Hybrid Scale-Attention Network with Evidential Uncertainty for Brain Tumor MRI Classification},
-  author  = {Josh, Tareque Jamil and Mim, Md. Minhazur Rahman and Joy, Md. Aminur Rahman and Assaduzzaman, Md. and Noori, Sheak Rashed Haider},
-  affiliation = {Department of Computer Science and Engineering, Daffodil International University, Dhaka, Bangladesh},
-  year    = {2026},
-  note    = {Code: https://github.com/tarequejosh/HSANet}
-}
-```
-
-Also cite the BRISC dataset: Fateh *et al.*, *Scientific Data*, https://doi.org/10.1038/s41597-026-06753-y
+BRISC dataset: Fateh et al., *Scientific Data*, https://doi.org/10.1038/s41597-026-06753-y
 
 ## License
 
-Code: MIT (see `LICENSE`). Dataset licenses follow BRISC (CC BY 4.0) and PMRAM-BD (CC BY 4.0) terms.
-
-## Contact
-
-Md. Assaduzzaman — assaduzzaman.cse@diu.edu.bd
+MIT — see `LICENSE`.

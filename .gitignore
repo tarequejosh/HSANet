@@ -6,24 +6,21 @@ __pycache__/
 venv/
 .env
 
+# Manuscript / local drafts (keep off GitHub)
+*.docx
+HSANet_Journal_Paper.md
+generate_paper*.py
+
 # Jupyter checkpoints
 .ipynb_checkpoints/
 
-# Large model weights (download separately or use Releases)
+# Model weights
 *.pth
 *.pt
 *.ckpt
-models/*.pth
 
 # OS / IDE
 .DS_Store
 Thumbs.db
 .idea/
 .vscode/
-
-# Agent / local tooling
-agent-tools/
-
-# Optional: exclude raw notebooks if using stripped copies in notebooks/
-# hsanet-v5.ipynb
-# hsanet-v6.ipynb
