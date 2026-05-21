@@ -1,0 +1,65 @@
+{
+  "mcnemar": {
+    "ResNet-50": {
+      "chi2": 4.083333333333333,
+      "p": 0.043308142810792094,
+      "n01": 10,
+      "n10": 2,
+      "hsanet_only": 10,
+      "baseline_only": 2,
+      "sig": "*"
+    },
+    "VGG-16": {
+      "chi2": 2.2857142857142856,
+      "p": 0.13057001811573699,
+      "n01": 6,
+      "n10": 1,
+      "hsanet_only": 6,
+      "baseline_only": 1,
+      "sig": "NS"
+    },
+    "EfficientNet-B3": {
+      "chi2": 1.4545454545454546,
+      "p": 0.22779999398822903,
+      "n01": 8,
+      "n10": 3,
+      "hsanet_only": 8,
+      "baseline_only": 3,
+      "sig": "NS"
+    },
+    "ViT-B/16": {
+      "chi2": 0.0,
+      "p": 1.0,
+      "n01": 5,
+      "n10": 4,
+      "hsanet_only": 5,
+      "baseline_only": 4,
+      "sig": "NS"
+    },
+    "Swin-Tiny": {
+      "chi2": 0.4444444444444444,
+      "p": 0.5049850750938457,
+      "n01": 6,
+      "n10": 3,
+      "hsanet_only": 6,
+      "baseline_only": 3,
+      "sig": "NS"
+    },
+    "DenseNet-121": {
+      "chi2": 0.9,
+      "p": 0.3427817111479112,
+      "n01": 7,
+      "n10": 3,
+      "hsanet_only": 7,
+      "baseline_only": 3,
+      "sig": "NS"
+    }
+  },
+  "cv_accuracy_mean": 99.06,
+  "cv_accuracy_std": 0.17435595774162746,
+  "cv_f1_mean": 99.07522716714065,
+  "test_acc_ci95": [
+    98.6,
+    99.7
+  ]
+}

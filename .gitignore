@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Large model weights (download separately or use Releases)
+*.pth
+*.pt
+*.ckpt
+models/*.pth
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Agent / local tooling
+agent-tools/
+
+# Optional: exclude raw notebooks if using stripped copies in notebooks/
+# hsanet-v5.ipynb
+# hsanet-v6.ipynb

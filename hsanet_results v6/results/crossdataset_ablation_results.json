@@ -1,0 +1,26 @@
+{
+  "Backbone Only": {
+    "in_domain_accuracy": 98.5,
+    "in_domain_f1": 98.51976220356153,
+    "in_domain_ece": 0.03586576592922207,
+    "unc_ratio": 1.999085545539856,
+    "params_m": 10.282412,
+    "avg_external": 97.00996677740864,
+    "avg_all": 97.75498338870432,
+    "PMRAM-BD_accuracy": 97.00996677740864,
+    "PMRAM-BD_f1": 97.00464047417017,
+    "PMRAM-BD_unc_ratio": 1.8605937957763672
+  },
+  "+ AMSM (DW-Sep)": {
+    "in_domain_accuracy": 99.2,
+    "in_domain_f1": 99.30130377005769,
+    "in_domain_ece": 0.026268644154071832,
+    "unc_ratio": 2.6020820140838623,
+    "params_m": 10.974902,
+    "avg_external": 97.40863787375416,
+    "avg_all": 98.30431893687708,
+    "PMRAM-BD_accuracy": 97.40863787375416,
+    "PMRAM-BD_f1": 97.41264098508734,
+    "PMRAM-BD_unc_ratio": 2.5790328979492188
+  }
+}
