@@ -1,8 +1,9 @@
 # HSANet: A Lightweight Hybrid Scale-Attention Network with Evidential Uncertainty for Brain Tumor MRI Classification
 
-**Authors:** [Your Name]<sup>1</sup>, [Co-authors]<sup>1,*</sup>  
-**Affiliation:** <sup>1</sup>[Department, Institution, Country]  
-**Correspondence:** *corresponding.author@institution.edu  
+**Authors:** Tareque Jamil Josh<sup>1</sup>, Md. Minhazur Rahman Mim<sup>1</sup>, Md. Aminur Rahman Joy<sup>1</sup>, Md. Assaduzzaman<sup>1</sup>, Sheak Rashed Haider Noori<sup>1</sup>  
+**Affiliation:** <sup>1</sup>Department of Computer Science and Engineering, Daffodil International University, Dhaka, Bangladesh  
+**Correspondence:** Md. Assaduzzaman — *assaduzzaman.cse@diu.edu.bd*  
+**Code:** https://github.com/tarequejosh/HSANet  
 
 ---
 
